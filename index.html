@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Shahu | AI Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Shahu | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="bg-animation"></div>
-
 <header>
-    <h1 class="glow">Shahu</h1>
+    <h1>Hi, I'm Shahu 👋</h1>
     <p class="typing"></p>
 </header>
 
-<section class="card">
+<section>
     <h2>🚀 About Me</h2>
-    <p>I am a passionate developer skilled in C, Python, and Web Development. I love building AI-powered applications and modern websites.</p>
+    <p>
+        I am a passionate developer skilled in C, Python, and Web Development.
+        I enjoy building real-world projects and exploring Artificial Intelligence.
+    </p>
 </section>
 
-<section class="card">
+<section>
     <h2>💻 Skills</h2>
-    <div class="skills">
-        <span>C</span>
-        <span>Python</span>
-        <span>HTML</span>
-        <span>CSS</span>
+
+    <div class="skill">
+        <p>C</p>
+        <div class="bar"><div class="progress c"></div></div>
     </div>
+
+    <div class="skill">
+        <p>Python</p>
+        <div class="bar"><div class="progress python"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="bar"><div class="progress html"></div></div>
+    </div>
+
 </section>
 
-<section class="card">
+<section>
     <h2>📂 Projects</h2>
-    <ul>
-        <li>🤖 Hospital Chatbot</li>
-        <li>🌐 Personal Portfolio Website</li>
-    </ul>
+
+    <div class="project">
+        <h3>🤖 Hospital Chatbot</h3>
+        <p>Developed using Python to assist patients with basic queries.</p>
+        <a href="#" class="btn">GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>🌐 Portfolio Website</h3>
+        <p>Designed using HTML, CSS, and JavaScript.</p>
+        <a href="#" class="btn">GitHub</a>
+    </div>
+
 </section>
 
-<section class="card">
-    <h2>📞 Contact</h2>
-    <p>Email: your@email.com</p>
+<section>
+    <h2>📄 Resume</h2>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
 </section>
+
+<section>
+    <h2>📩 Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Shahu | All Rights Reserved</p>
+</footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
