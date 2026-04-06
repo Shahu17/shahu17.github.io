@@ -1,27 +1,24 @@
-// Typing effect
+// Typing Effect
 const text = ["C Developer", "Python Programmer", "Web Developer", "AI Enthusiast"];
-let i = 0;
-let j = 0;
-let currentText = "";
-let isDeleting = false;
+let i = 0, j = 0, current = "", deleting = false;
 
 function type() {
     if (i < text.length) {
-        if (!isDeleting && j <= text[i].length) {
-            currentText = text[i].substring(0, j++);
-        } else if (isDeleting && j >= 0) {
-            currentText = text[i].substring(0, j--);
+        if (!deleting && j <= text[i].length) {
+            current = text[i].substring(0, j++);
+        } else if (deleting && j >= 0) {
+            current = text[i].substring(0, j--);
         }
 
-        document.querySelector(".typing").innerHTML = currentText;
+        document.querySelector(".typing").innerHTML = current;
 
-        if (j == text[i].length) isDeleting = true;
+        if (j == text[i].length) deleting = true;
         if (j == 0) {
-            isDeleting = false;
+            deleting = false;
             i++;
         }
 
-        setTimeout(type, isDeleting ? 50 : 100);
+        setTimeout(type, deleting ? 50 : 100);
     } else {
         i = 0;
         type();
@@ -29,15 +26,3 @@ function type() {
 }
 
 type();
-
-// Scroll animation
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", () => {
-    cards.forEach(card => {
-        const top = card.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-            card.classList.add("show");
-        }
-    });
-});
